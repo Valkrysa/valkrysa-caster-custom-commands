@@ -1,8 +1,3 @@
-# These lines that start with the # are called comments. They don't affect the way the code runs.
-# In this tutorial file, I put comments above the relevant lines.
-
-# You can skip down to the next comment, for now this is not important...
-
 from dragonfly import (MappingRule, BringApp, Key, Function, Grammar, Playback,
                        IntegerRef, Dictation, Choice, WaitWindow)
 
@@ -57,6 +52,5 @@ class ValkrysaSQL(MappingRule):
     'variable character': Text("VARCHAR()") + Key("left")
     }
 
-# This stuff is required too -- However you will learn more about how to change the rule types and contexts later.
 def get_rule():
     return ValkrysaSQL, RuleDetails(name="valkrysa sequel")
