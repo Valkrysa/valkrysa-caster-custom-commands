@@ -9,7 +9,8 @@ class ValkrysaGeneral(MappingRule):
 
     mapping = {
     "add kick": R(Key("shift:down") + Key("alt:down") + Mouse("left") + Key("shift:up") + Key("alt:up")),
-    "kicker": R(Mouse("left"))
+    "kicker": R(Mouse("left")),
+    "select address bar": R(Key("ctrl:down") + Key("l") + Key("ctrl:up"))
     }
 
 def get_rule():
