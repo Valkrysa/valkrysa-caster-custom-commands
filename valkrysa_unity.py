@@ -8,7 +8,10 @@ from castervoice.lib.merge.state.short import R
 class ValkrysaUnity(MappingRule):
 
     mapping = {
+        "add kick": R(Key("ctrl:down") + Key("alt:down") + Mouse("left") + Key("ctrl:up") + Key("alt:up")),
         "unity play": R(Key("ctrl:down") + Key("p") + Key("ctrl:up")), 
+        "unity pause": R(Key("ctrl:down") + Key("shift:down") + Key("p") + Key("ctrl:up") + Key("shift:up")), 
+        "unity step": R(Key("ctrl:down") + Key("alt:down") + Key("p") + Key("ctrl:up") + Key("alt:up")), 
         "unity hand": Key("q"), 
         "unity move": Key("w"), 
         "unity rotate": Key("e"), 
@@ -17,7 +20,10 @@ class ValkrysaUnity(MappingRule):
         "unity vector": Text("Vector3"),
         "create awake function": R(Text("private void Awake(){}") + Key("up") + Key("enter")),
         "create start function": R(Text("private void Start(){}") + Key("up") + Key("enter")),
-        "create update function": R(Text("private void Update(){}") + Key("up") + Key("enter"))
+        "create update function": R(Text("private void Update(){}") + Key("up") + Key("enter")),
+        "string array": Text("string[]"),
+        "integer array": Text("int[]"),
+        "unity log": R(Text("Debug.Log();") + Key("left") + Key("left"))
     }
 
 def get_rule():
