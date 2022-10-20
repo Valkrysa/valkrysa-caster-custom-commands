@@ -8,6 +8,7 @@ from castervoice.lib.merge.state.short import R
 class ValkrysaSQL(MappingRule):
 
     mapping = {
+    "add kick": R(Key("shift:down") + Key("alt:down") + Mouse("left") + Key("shift:up") + Key("alt:up")),
     "new query":
         Text("SELECT * ") + Key("enter")
         + Text("FROM ddc2_edw. ") + Key("enter")
@@ -51,12 +52,14 @@ class ValkrysaSQL(MappingRule):
     'union': Text("UNION ") + Key("enter"),
     'where': Text("WHERE "),
     'group by': Text("GROUP BY 1"),
+    'group by one': Text("GROUP BY 1"),
     'group by two': Text("GROUP BY 1, 2"),
     'group by three': Text("GROUP BY 1, 2, 3"),
     'group by four': Text("GROUP BY 1, 2, 3, 4"),
     'group by five': Text("GROUP BY 1, 2, 3, 4, 5"),
     'having': Text("HAVING  > 1 ") + Key("left,left,left,left,left"),
     'order by': Text("ORDER BY 1"),
+    'order by one': Text("ORDER BY 1"),
     'order by two': Text("ORDER BY 1, 2"),
     'order by three': Text("ORDER BY 1, 2, 3"),
     'order by four': Text("ORDER BY 1, 2, 3, 4"),
@@ -66,6 +69,7 @@ class ValkrysaSQL(MappingRule):
     'alias as': Text(" AS "),
     'limit': Text("LIMIT 499;"),
     'case statement': Text("CASE ") + Key("enter,tab") + Text("WHEN  THEN ") + Key("enter") + Text("ELSE ") + Key("enter,backspace") + Text("END AS "),
+    'inline case statement': Text("CASE WHEN  =  THEN  END"),
     'date key': Text("date_key"),
     'date time key': Text("date_time_key"),
     'is not null': Text(" IS NOT NULL"),
