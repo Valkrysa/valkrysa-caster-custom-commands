@@ -23,7 +23,8 @@ class ValkrysaUnity(MappingRule):
         "create update function": R(Text("private void Update(){}") + Key("up") + Key("enter")),
         "string array": Text("string[]"),
         "integer array": Text("int[]"),
-        "unity log": R(Text("Debug.Log();") + Key("left") + Key("left"))
+        "unity log": R(Text("Debug.Log();") + Key("left") + Key("left")),
+        "game object": Text("GameObject")
     }
 
 def get_rule():
