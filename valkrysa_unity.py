@@ -24,7 +24,9 @@ class ValkrysaUnity(MappingRule):
         "string array": Text("string[]"),
         "integer array": Text("int[]"),
         "unity log": R(Text("Debug.Log();") + Key("left") + Key("left")),
-        "game object": Text("GameObject")
+        "game object": Text("GameObject"),
+        "sync var": Text("[SyncVar] "),
+        "serialize field": Text("[SerializeField] ")
     }
 
 def get_rule():
