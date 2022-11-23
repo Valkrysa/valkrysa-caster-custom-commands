@@ -26,7 +26,9 @@ class ValkrysaUnity(MappingRule):
         "unity log": R(Text("Debug.Log();") + Key("left") + Key("left")),
         "game object": Text("GameObject"),
         "sync var": Text("[SyncVar] "),
-        "serialize field": Text("[SerializeField] ")
+        "serialize field": Text("[SerializeField] "),
+        "rename": Key("f2"),
+        "duplicate": R(Key("ctrl:down") + Key("d") + Key("ctrl:up"))
     }
 
 def get_rule():
