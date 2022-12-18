@@ -28,7 +28,8 @@ class ValkrysaUnity(MappingRule):
         "sync var": Text("[SyncVar] "),
         "serialize field": Text("[SerializeField] "),
         "rename": Key("f2"),
-        "duplicate": R(Key("ctrl:down") + Key("d") + Key("ctrl:up"))
+        "duplicate": R(Key("ctrl:down") + Key("d") + Key("ctrl:up")),
+        "add component": R(Key("ctrl:down") + Key("shift:down") + Key("a") + Key("ctrl:up") + Key("shift:up"))
     }
 
 def get_rule():
