@@ -8,7 +8,6 @@ from castervoice.lib.merge.state.short import R
 class ValkrysaGeneral(MappingRule):
 
     mapping = {
-    "add pop": R(Key("shift:down") + Key("alt:down") + Mouse("left") + Key("shift:up") + Key("alt:up")),
     "pop": R(Mouse("left")),
     "select address bar": R(Key("ctrl:down") + Key("l") + Key("ctrl:up"))
     }
